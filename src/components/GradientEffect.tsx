@@ -4,20 +4,21 @@ import { BackgroundGradient } from "./ui/background-gradient";
 import { Menu, MenuItem } from "./ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
+import { Button } from "./ui/moving-border";
 
 function BgButtonGradientEffect() {
   return (
     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
       <div>
-        <BackgroundGradient>
-          <button className="w-40 h-10 rounded-l-full rounded-r-full bg-black border border-transparent text-white text-sm">
-            Join now
-          </button>
-        </BackgroundGradient>
+        <Button
+          className="bg-white dark:bg-slate-900 text-black dark:text-white"
+        >
+          Join now
+        </Button>
       </div>
       <div>
         <BackgroundGradient>
-          <button className="w-40 h-10 rounded-l-full rounded-r-full bg-white text-black border  text-sm">
+          <button className="w-40 h-10 rounded-l-full rounded-r-full text-black  text-sm">
             Signup
           </button>
         </BackgroundGradient>
@@ -48,7 +49,7 @@ function BgNavGradientEffect({ className }: { className?: string }) {
               item="About"
             ></MenuItem>
           </Link>
-          <Link href={"/contact-us"} className="px-3">
+          <Link href={"/contact"} className="px-3">
             <MenuItem
               setActive={setActive}
               active={active}
